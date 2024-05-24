@@ -1,7 +1,7 @@
 package interfaces;
 
 public interface Eseguibile {
-    public void play();
+    void play();
 
-    public void show();
+    void show();
 }
