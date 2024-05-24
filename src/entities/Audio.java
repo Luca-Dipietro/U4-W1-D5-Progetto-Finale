@@ -21,7 +21,6 @@ public class Audio extends ElementoMultimediale {
         this.volume++;
     }
 
-    @Override
     public void play() {
         String puntoEsclamativo = "";
         String titolo = "";
@@ -32,5 +31,10 @@ public class Audio extends ElementoMultimediale {
             puntoEsclamativo += "!";
         }
         System.out.println(titolo + " " + puntoEsclamativo);
+    }
+
+    @Override
+    public void esegui() {
+        play();
     }
 }

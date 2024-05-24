@@ -15,12 +15,7 @@ public abstract class ElementoMultimediale implements Eseguibile {
     }
 
     @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void show() {
+    public void esegui() {
         
     }
 }
