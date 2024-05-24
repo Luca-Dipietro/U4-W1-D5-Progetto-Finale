@@ -1,22 +1,14 @@
 package entities;
 
-public class Immagine extends ElementoMultimediale {
+import interfaces.Luminosità;
+
+public class Immagine extends ElementoMultimediale implements Luminosità {
 
     private int luminosità;
 
     public Immagine(String titolo, int luminosità) {
         super(titolo);
         this.luminosità = luminosità;
-    }
-
-    public void aumentaLuminosità() {
-        this.luminosità++;
-    }
-
-    public void abbassaLuminosità() {
-        if (this.luminosità > 0) {
-            this.luminosità--;
-        }
     }
 
     public void show() {
@@ -30,5 +22,17 @@ public class Immagine extends ElementoMultimediale {
     @Override
     public void esegui() {
         show();
+    }
+
+    @Override
+    public void abbassaLuminosità() {
+        if (this.luminosità > 0) {
+            this.luminosità--;
+        }
+    }
+
+    @Override
+    public void alzaLuminosità() {
+        this.luminosità++;
     }
 }
